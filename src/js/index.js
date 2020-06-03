@@ -43,7 +43,7 @@ elements.searchResPages.addEventListener('click', e => {
     if (btn) {
         const goToPage = parseInt(btn.dataset.goto, 10);
         searchView.clearResults();
-        searchView.renderResults(state.search.result);
+        searchView.renderResults(state.search.result, goToPage);
     }
 });
 
