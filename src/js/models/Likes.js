@@ -22,3 +22,10 @@ export default class Likes {
         return this.likes.length;
     }
 }
+
+
+
+
+
+
+
