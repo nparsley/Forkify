@@ -85,19 +85,6 @@ export const renderRecipe = (recipe, isLiked) => {
             <div class="recipe__ingredients">
                 <ul class="recipe__ingredient-list">
                     ${recipe.ingredients.map(el => createIngredient(el)).join('')}
-
-
-
-                    <li class="recipe__item">
-                        <svg class="recipe__icon">
-                            <use href="img/icons.svg#icon-check"></use>
-                        </svg>
-                        <div class="recipe__count">1/2</div>
-                        <div class="recipe__ingredient">
-                            <span class="recipe__unit">cup</span>
-                            ricotta cheese
-                        </div>
-                    </li>
                 </ul>
 
                 <button class="btn-small recipe__btn recipe__btn--add">
@@ -127,10 +114,10 @@ export const renderRecipe = (recipe, isLiked) => {
 };
 
 export const updateServingsIngredients = recipe => {
-    //Update servings
+    // Update servings
     document.querySelector('.recipe__info-data--people').textContent = recipe.servings;
 
-    //Update ingredients
+    // Update ingredeints
     const countElements = Array.from(document.querySelectorAll('.recipe__count'));
     countElements.forEach((el, i) => {
         el.textContent = formatCount(recipe.ingredients[i].count);
